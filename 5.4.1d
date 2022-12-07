@@ -1,0 +1,20 @@
+f=@(x) x.^2*log(x)
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)x.^2*log(x)
+
+[int,m]=adapquad(f,1,3,3,(0.5e-8),'trap')
+
+int =
+
+   6.998621711791274
+
+
+m =
+
+       32768
+
+diary off

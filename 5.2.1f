@@ -1,0 +1,47 @@
+format long
+f=@(x) x.^3/((x.^4-1).^(1/2))
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)x.^3/((x.^4-1).^(1/2))
+
+t1 = comptrap(2,3,f,16)
+
+t1 =
+
+   2.535672258240919
+
+t2 = comptrap(2,3,f,32)
+
+t2 =
+
+   2.535651278545044
+
+syms x f(x)
+f(x)= x.^3/((x.^4-1).^(1/2))
+ 
+f(x) =
+ 
+x^3/(x^4 - 1)^(1/2)
+ 
+ans = int(f(x),[2,3])
+ 
+ans =
+ 
+2*5^(1/2) - 15^(1/2)/2
+ 
+error1 = abs(ans - t1)
+ 
+error1 =
+ 
+15^(1/2)/2 - 2*5^(1/2) + (5709826318673753)/(2251799813685248) = 2.797634e-5
+ 
+error2 = abs(ans - t2)
+ 
+error2 =
+ 
+15^(1/2)/2 - 2*5^(1/2) + (2854889538299245)/(1125899906842624) = 6.99664e-5
+ 
+diary off

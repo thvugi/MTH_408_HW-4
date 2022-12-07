@@ -1,0 +1,22 @@
+
+f=@(x) x/sin(x)
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)x/sin(x)
+
+t1 = compmid(0,(pi/2),f,16)
+
+t1 =
+
+   1.831529931094524
+
+t2 = compmid(0,(pi/2),f,32)
+
+t2 =
+
+   1.831830810703287
+
+diary off
